@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- agregar las 3 etiquetas meta -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Reloj</title>
 </head>
-<body>
+<body >
     <main class="container my-5 text-center">
-        <section>
-            <p id='fecha'>Fecha</p>
-            <p id='hora'>Hora</p>
+        <section class="azul" id='contenedorPrincipal'>
+            <p id='fecha' class="fecha">Fecha</p>
+            <p id='hora' class="hora">Hora</p>
             <article>
-                <button class="btn btn-primary">Azul</button>
-                <button class="btn btn-primary">Rosa</button>
-                <button class="btn btn-primary">Verde</button>
+                <button class="btn btn-azul" onclick="cambiarColor('azul')">Azul</button>
+                <button class="btn btn-rosa" onclick="cambiarColor('rosa')">Rosa</button>
+                <button class="btn btn-verde" onclick="cambiarColor('verde')">Verde</button>
             </article>
         </section>
     </main>

@@ -43,8 +43,41 @@ function obtenerFecha() {
 
   let parrafoHoras = document.querySelector("#hora");
 
-  parrafoHoras.innerHTML = `${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`;
+  // agregar 0 cuando los numeros son menores a 10
+  let horas = fecha.getHours();
+  let minutos = fecha.getMinutes();
+  let segundos = fecha.getSeconds();
+
+  if(segundos < 10 ){
+    segundos = '0' + segundos;
+  }
+
+  if(minutos < 10){
+    minutos = '0'+ minutos;
+  }
+
+  if(horas < 10){
+    horas = '0'+ horas;
+  }
+
+  parrafoHoras.innerHTML = `${horas}:${minutos}:${segundos}`;
 }
 
 
 setInterval(obtenerFecha, 1000);
+
+function cambiarColor(color){
+
+  let contenedor =  document.querySelector('#contenedorPrincipal');
+  // console.log(contenedor);
+  contenedor.className= color;
+
+  // switch(color){
+  //   case 'rosa':
+  //     contenedor.className= 'rosa';
+  //     break;
+  //   case 'azul':
+  //     contenedor.className= 'azul';
+  //     break;
+  // }
+}
